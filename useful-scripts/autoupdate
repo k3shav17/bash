@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+
+## This operations takes place when this script is ran.
+
+cp /home/k3sh/.bash_history ~/Documents/.dotfiles/.bash_history
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
