@@ -15,11 +15,11 @@ then
 	if [ $? = 1 ]
 	then
 		echo "/var/log/mongodb does not exists, creating now"
-		mkdir /var/log/mongodb
+		mkdir -p /var/log/mongodb
 	else
 		echo "/var/log/mongodb also exists"
 	fi
 fi
 
-chown -R $mongodb:$mongodb /var/lib/mongodb
-chown -R $mongodb:$mongodb /var/log/mongodb
+sudo chown -R $mongodb:$mongodb /var/lib/mongodb
+sudo chown -R $mongodb:$mongodb /var/log/mongodb
