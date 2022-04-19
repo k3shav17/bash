@@ -13,6 +13,7 @@ echo "7. Palenight "
 echo "8. SolarizedDark "
 echo "9. TomorrowNight "
 echo "10. Kanagawana"
+echo "11. Deus"
 
 shopt -s nocasematch
 read color;
@@ -28,4 +29,6 @@ case $color in
 	8) cp ~/$DIR/kittythemes/solarizeddark.conf ~/.config/kitty/kitty.conf;;
 	9) cp ~/$DIR/kittythemes/tomorrownight.conf ~/.config/kitty/kitty.conf;;
 	10) cp ~/$DIR/kittythemes/kanagawana.conf ~/.config/kitty/kitty.conf;;
+    11) cp ~/$DIR/kittythemes/deus.conf ~/.config/kitty/kitty.conf;;
+
 esac
