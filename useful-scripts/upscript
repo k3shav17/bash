@@ -1,11 +1,11 @@
 #!/usr/bin/bash
 
 
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt full-upgrade
-sudo apt dist-upgrade
-sudo apt autoremove
-sudo apt autoclean
-sudo apt clean
-
+sudo pacman -Syu
+yay -Sy
+sudo pamac upgrade && sudo pamac update
+flatpak update
+pacman -Qtdq
+if [ $? -eq 0 ];
+then sudo pacman -Rs $(pacman -Qtdq)
+fi
