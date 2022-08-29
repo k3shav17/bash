@@ -1,11 +1,10 @@
 #!/usr/bin/bash
 
-
-sudo pacman -Syu
-yay -Sy
-sudo pamac upgrade && sudo pamac update
-flatpak update
-pacman -Qtdq
+sudo pacman -Syu                              # Command to update the repos and to upgrade
+yay -Sy                                       # Command to update the repos and to upgrade  (but with Yay)
+sudo pamac upgrade && sudo pamac update       # Command to update the repos with Pamac and to update
+flatpak update                                # Command to update the flatpak
+pacman -Qtdq                                  # Command to list the pacman unused dependencies
 if [ $? -eq 0 ];
-then sudo pacman -Rs $(pacman -Qtdq)
+then sudo pacman -Rs "$(pacman -Qtdq)"        # If the statement is success, then will be deleting the unused dependencies
 fi
